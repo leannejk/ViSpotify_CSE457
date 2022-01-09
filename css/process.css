@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #bdc3c4;
+    text-align: center;
+
+}
+
+.title{
+    font-family: 'Sacramento', cursive;
+    font-size: 100px;
+    color: #196670;
+}
+
+h1 {
+    color: #3c866c;
+    margin-top: 40px;
+    font-weight: 300;
+}
+
+h2 {
+    font-weight: 100;
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #668d90;
+    font-weight: bold;
+
+}
+
+h3 {
+    font-weight: 100;
+    font-size: 15px;
+    margin-bottom: 30px;
+    color: #701951;
+    font-weight: bold;
+}
+
+.strong{
+    font-weight: bold;
+}
+
+#sketch1{
+    width: 40%;
+    height: auto;
+}
+
+#implementation{
+    width: 40%;
+    height: auto;
+}

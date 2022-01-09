@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vispotify - CSE457 final project</title>
+
+    <!-- Custom CSS code -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+  <div class="topnav">
+    <a class="active" href="https://csex57.github.io/musicpreferences/processbook.html">Process Book</a>
+    <a  href="https://github.com/csex57/musicpreferences">Our Code</a>
+    <a  href="https://csex57.github.io/musicpreferences/video.html">Video</a>
+    <a  href="#top">Top</a>
+    <a  href="#spider-chart">Genre Chart</a>
+    <a  href="#bubble-chart">Artists Chart</a>
+    <a  id="artistName" href="#lollipop"></a>
+    <a id="playlistName"></a>
+    <a id = "right" >Scroll for More Visualizations</a>
+
+    
+  </div>
+
+
+<img id="logo" class="top" src="pics/logo.png" alt="logo">
+
+<div class="container">
+    <div id="formPlaylist" class="PlaylistList">
+      <form class="form-inline">
+        <div class="form-group">
+            <label id= "labelplalist"for="playlist-chosen">Pick Your Playlist</label>
+            <p></p>
+            <select class="form-control" id="playlist-chosen">
+              <option disabled selected value> Select a Playlist</option>
+                <option value="37i9dQZEVXbMDoHDwVN2tF" title="Top Songs global">Top Songs global</option>
+                <option value="2YRe7HRKNRvXdJBp9nXFza" title="Top played all times">Top played all times</option>
+                <option value="6j4w1woXd7xzGCNQoKrpY9" title="Our favorites">Our favorites</option>
+                <option value="7gO9WmJaPmIviOlvK1m95P" title="Running Hits">Running Hits</option>
+                <option value="1X7t801xm6YZcTTLWYiBHA" title="Acoustic Hits">Acoustic Hits</option>
+            </select>
+        </div>
+    </form>
+    </div>
+
+    <p id="hide" class="scroll">Scroll for more</p>
+
+    <div id="loggedin" class = "list">
+        <div class="parent" >
+      <!--song list-->
+      <div class = "listWrapper">
+        <p class="titles">Playlist songs</p>
+        <p class="titles2">hover songs to get more information</p>
+        <div id="songList">
+          <h4></h4>
+          <div class="loader">
+            <div class="loader-wheel"></div>
+          </div>
+        </div>
+      </div>
+
+        
+<div class="a-box" >
+  <div id = "notremove"><button id = "exit" class="button-54" role="button">X</button></div>
+  <div class="text-container">
+    <h3 id= "song"></h3>
+    <div id="songInfo">
+  </div>
+</div>
+</div>
+
+        <!--spider chart-->
+        <div id= "spider-chart" style="display: inline-block; width:25%"></div>
+      </div>
+
+      <p class="scroll">Scroll for more</p>
+
+        <!--bubble chart-->
+        <div id= "bubble-chart" style="position: relative"> </div>
+      
+        <!--lollipop chart-->
+        <div id= "lollipop">
+        </div>
+    </div>
+  </div>
+
+  <a class="button" href="#top">Top</a>
+  <p></p>
+  <p></p>
+  <p></p>
+
+
+
+<!-- Load JS libraries -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<script src="js/radarChart.js"></script>
+
+
+<!-- Visualization objects -->
+
+<script src="js/spiderChart.js"></script>
+<script src="js/bubbleChart.js"></script>
+<script src="js/lollipopChart.js"></script>
+<script src="js/SongList.js"></script>
+
+<!-- Load data, create visualizations -->
+<script type="module" src="js/main.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+*{
+  font-size: 13px;
+}
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #121640;
+    text-align: center;
+
+
+}
+
+h1 {
+    color: #E43397;
+    margin-top: 40px;
+    font-weight: 300;
+}
+
+h2{
+    font-weight: 100;
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #7900FF;
+}
+
+.highlightGenre{
+  font-weight: 900;
+    fill:  #CB88FF;
+    
+    --x-offset: -0.0625em;
+    --y-offset: 0.0625em;
+    --stroke: 0.025em;
+    --background-color: white;
+    --stroke-color: #00C4CC;
+    
+    text-shadow: 
+      
+      var(--x-offset)
+      var(--y-offset)
+      0px
+      var(--background-color), 
+      
+      calc( var(--x-offset) - var(--stroke) )
+      calc( var(--y-offset) + var(--stroke) )
+      0px
+      var(--stroke-color);
+}
+
+h3{
+    color: #CB88FF
+}
+
+h4{
+  color:#f2f2f2;
+  font-size: 10px;
+}
+
+.titles{
+  color:antiquewhite;
+  fill: antiquewhite;
+  font-size: 16px;
+  text-decoration: underline antiquewhite 2px solid;
+}
+
+.scroll{
+  color:antiquewhite;
+  fill: antiquewhite;
+  text-decoration: underline overline antiquewhite 2px solid;
+  font-size: 15px;
+
+}
+
+.titles2{
+  color:antiquewhite;
+  font-size: 12px;
+  background-color:#333;
+}
+
+.yAxis, .xAxis, .lollipopLine, .lollipopCirc{
+    color: #00C4CC
+}
+a, .normal{
+  color: #00C4CC;
+  text-align: center;
+}
+
+#logo{
+    width: 40%;
+    height: auto;
+}
+
+#loginPic{
+    width: 7%;
+    height: auto;
+    border: #00C4CC 3px solid;
+}
+#moreViz{
+  color: #00C4CC
+}
+
+/* CHOOSE PLAYLIST FORM */
+
+
+.form-inline {
+  margin-bottom: 30px;
+}
+
+.form-control {
+  background: #ffecf7;
+  border: 1px solid #E43397;
+  width: 250px;
+} 
+
+.form-group label {
+  font-weight: 400;
+  margin-right: 10px;
+}
+
+.form-inline button, .btn-link:active {
+  border-left: 1px solid #E43397;
+  margin-left: 15px;
+  padding-left: 15px;
+  color: #E43397;
+  cursor: pointer;
+  outline: none;
+}
+.form-inline button:hover, .btn-link:active, .btn-link:focus  {
+  border-left: 1px solid #E43397(136, 136, 136);
+  color: #E43397;
+  text-decoration: none;
+  outline: none;
+}
+.form-inline button .glyphicon {
+  margin-right: 5px;
+}
+
+/* SONG LIST AND SCROLLER */
+
+ol, li {
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+.listWrapper {
+
+  position: absolute;
+  top:0px;
+
+}
+
+#songList{
+  border: 10px solid #ffecf7;
+  border-radius: 255px  15px 225px 15px/15px 225px 15px 255px;
+  line-height:1.5em;
+  margin: 2% top;
+  overflow-y:scroll;
+  height:400px;
+  width: 430px;
+
+}
+
+#spider-chart{
+  position:absolute; 
+  left:60%;
+  top:20px;
+}
+
+.parent{
+  position: relative;
+  height: 600px;
+  
+}
+
+.a-box{
+  position: absolute;
+  left: 480px;
+  top: 200px;
+  text-align: left;
+  overflow: auto;
+  width: 200px;
+
+}
+
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
+
+li{
+  color:#ffecf7;
+  border-bottom: 0.2px dotted #333;
+}
+
+li:hover{
+  border-bottom: 0.2px dotted #E43397;
+}
+
+
+.list-numbered {
+  list-style: none;
+  margin-left: 1em;
+  counter-reset: line;
+  border: #ffecf7 10px;
+
+}
+
+.list-numbered > li {
+  font-size: 10px;
+  position: relative;
+  margin-bottom: 1.5em;
+}
+
+.list-numbered > li:before {
+	position: absolute;
+	left: 7%;
+	display: inline-block;
+  width: 30px;
+	height: 30px;
+	margin-right: 0.5em;
+  background-color: #E43397;
+	border-radius: 50%;
+	color: #fff;
+  font-size: 15px;
+	text-align:center;
+  line-height: 1.25em;
+	counter-increment: line;
+	content: counter(line);
+}
+
+/* SPIDER CHART */
+
+.radar-chart .area {
+    fill-opacity: 0.7;
+  }
+  .radar-chart.focus .area {
+    fill-opacity: 0.3;
+  }
+  .radar-chart.focus .area.focused {
+    fill-opacity: 0.9;
+  }
+  .area.genreArea, .genreArea .circle {
+    fill: #CB88FF;
+    stroke: none;
+  }
+
+  /* login */
+  /* #login, #loggedin {
+    display: none;
+  } */
+  .text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 500px;
+  }
+
+  .lollipopImg{
+    border-radius: 50%;;
+    }
+
+  
+    /* PLATLIST CHOOSE HEADER */
+
+  #labelplalist, .class0 > span, .class1 > span , .class2 > span, tspan:hover{
+    font-size: 17px;
+    font-weight: 900;
+    color:  #CB88FF;
+    
+    --x-offset: -0.0625em;
+    --y-offset: 0.0625em;
+    --stroke: 0.025em;
+    --background-color: white;
+    --stroke-color: #00C4CC;
+    
+    text-shadow: 
+      
+      var(--x-offset)
+      var(--y-offset)
+      0px
+      var(--background-color), 
+      
+      calc( var(--x-offset) - var(--stroke) )
+      calc( var(--y-offset) + var(--stroke) )
+      0px
+      var(--stroke-color);
+    
+  }
+
+  .class0 > span, .class1 > span , .class2 > span{
+    font-size: 13px;
+    color:   #00C4CC;
+    --stroke-color:#CB88FF;
+  }
+
+  /* LOADER IN SONG LIST */
+  .loader {
+    width: 60px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+  }
+  
+  .loader-wheel {
+    animation: spin 1s infinite linear;
+    border: 2px solid rgba(30, 30, 30, 0.5);
+    border-left: 4px solid #fff;
+    border-radius: 50%;
+    height: 50px;
+    margin-bottom: 10px;
+    width: 50px;
+  }
+  
+  .loader-text {
+    color: #fff;
+    font-family: arial, sans-serif;
+  }
+  
+  .loader-text:after {
+    content: 'Loading';
+    animation: load 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+/* navagation bar  */
+
+  .topnav {
+    overflow: hidden;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 10;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    
+  }
+
+  #right{
+    float: right;
+    font-weight: bold;
+    color: #CB88FF
+  }
+
+  #right:hover, #playlistName:hover{
+    color: #f2f2f2;
+    background-color: #333;
+  }
+
+  #playlistName{
+    font-weight: bold;
+    color: #00C4CC
+
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #CB88FF;
+    color: white;
+  }
+
+
+
+/* CSS */
+.button-54 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 8px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: left;
+  color: #000;
+  cursor: pointer;
+  border: 1px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-54:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .button-54 {
+    padding: 0.25em 0.75em;
+  }
+}
+
+
+.tooltipLolli {	
+  position: absolute;						
+  width: 60px;					
+  height: 28px;					
+  padding: 2px;				
+  font-family: 'Quicksand', sans-serif;
+  font-size: 8px;
+  color:black;
+  fill:black;
+  text-align: center;
+  border: 0px;		
+  border-radius: 8px;			
+  pointer-events: none;			
+}
+
+.button {
+  width: 115px;
+  height: 25px;
+  background: #E43397;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  line-height: 25px;
+}
